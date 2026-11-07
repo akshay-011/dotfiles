@@ -1,0 +1,24 @@
+# ==========================================
+# ble.sh (Bash Line Editor) Configuration
+# ==========================================
+
+# 1. Disable multiline mode and banner
+ble/decode/keymap#load emacs
+bleopt keymap_emacs_mode_string_multiline=""
+
+# 2. Enter always executes the command immediately (no multiline insertion)
+ble-bind -m emacs -f RET accept-line
+ble-bind -m emacs -f C-m accept-line
+ble-bind -m emacs -f "M-RET" accept-line
+ble-bind -m emacs -f "M-C-m" accept-line
+ble-bind -m safe -f "M-RET" accept-line
+ble-bind -m safe -f "M-C-m" accept-line
+
+# 3. Suggestion handling
+# Pressing Enter executes the recommendation
+ble-bind -m auto_complete -f RET auto_complete/accept-line
+ble-bind -m auto_complete -f C-m auto_complete/accept-line
+
+# Standard keys to dismiss suggestions without using Escape
+ble-bind -m auto_complete -f down auto_complete/cancel
+ble-bind -m auto_complete -f C-g auto_complete/cancel
