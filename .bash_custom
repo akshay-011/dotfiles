@@ -6,6 +6,10 @@
 # 1. User Local Binaries
 export PATH="$HOME/.local/bin:$PATH"
 
+# Prevent Omarchy's default alias c='opencode --auto' from launching OpenCode
+unalias c 2>/dev/null || true
+alias c='clear'
+
 # 2. Starship Prompt Initialization
 if command -v starship &> /dev/null && [[ "$PROMPT_COMMAND" != *"starship"* ]]; then
   eval "$(starship init bash)"
