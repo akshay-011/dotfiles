@@ -9,6 +9,17 @@ $git_branch\
 $git_status\
 $git_state\
 $git_metrics\
+$nodejs\
+$rust\
+$golang\
+$python\
+$java\
+$c\
+$zig\
+$bun\
+$deno\
+$lua\
+$docker_context\
 $cmd_duration\
 $status\
 $line_break\
@@ -61,6 +72,70 @@ deleted_style = "bold red"
 only_nonzero_diffs = true
 format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
 disabled = false
+
+# ------------------------------------------------------------------------------
+# Language & Compiler Runtime Modules (Option B: Clean Nerd Font Glyphs)
+# ------------------------------------------------------------------------------
+
+[nodejs]
+symbol = "󰎙 "
+style = "bold green"
+format = "[$symbol($version )]($style)"
+
+[rust]
+symbol = " "
+style = "bold red"
+format = "[$symbol($version )]($style)"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = "[$symbol($version )]($style)"
+
+[java]
+symbol = " "
+style = "bold red"
+format = "[$symbol($version )]($style)"
+
+[c]
+symbol = " "
+style = "bold blue"
+format = "[$symbol($version )]($style)"
+detect_files = ["CMakeLists.txt", "compile_flags.txt", "compile_commands.json"]
+
+[zig]
+symbol = " "
+style = "bold yellow"
+format = "[$symbol($version )]($style)"
+
+[bun]
+symbol = "󰮄 "
+style = "bold white"
+format = "[$symbol($version )]($style)"
+
+[deno]
+symbol = "🦕 "
+style = "bold green"
+format = "[$symbol($version )]($style)"
+
+[lua]
+symbol = " "
+style = "bold blue"
+format = "[$symbol($version )]($style)"
+
+[docker_context]
+symbol = "󰡨 "
+style = "bold blue"
+format = "[$symbol$context]($style) "
+
+# ------------------------------------------------------------------------------
+# System & Timing
+# ------------------------------------------------------------------------------
 
 [cmd_duration]
 min_time = 2000
