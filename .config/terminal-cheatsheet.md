@@ -9,18 +9,18 @@ Your **Foot terminal**, **Starship prompt**, and **Bash CLI workflow** on Omarch
 Configured in [`~/.config/starship.toml`](file:///home/akshay/.config/starship.toml):
 
 * **Two-Line Developer Layout**:
-  * **Line 1 (Context)**: Directory (`repo/path`) → Git Branch (` main`) → Git Status Badges → Line Diff Metrics (`+10 -2`) → **Project Language/Compiler** (`📦 v26.13.0`, `☕ v21.0.4`, etc.) → Execution Duration (`took 2.5s `) → Exit Status (`✘`).
+  * **Line 1 (Context)**: Directory (`repo/path`) → Git Branch (` main`) → Git Status Badges → Line Diff Metrics (`+10 -2`) → **Project Language/Compiler** (`󰎙 v26.13.0`, ` v21.0.4`, etc.) → Execution Duration (`took 2.5s `) → Exit Status (`✘`).
   * **Line 2 (Action)**: Clean prompt input character (`❯`).
-* **Project Language & Compiler Detection (2x Emoji Logos)**:
-  * `📦 <version>`: Node.js (`package.json`, `.node-version`)
-  * `🦀 <version>`: Rust (`Cargo.toml`)
-  * `🐹 <version>`: Go (`go.mod`, `*.go`)
-  * `🐍 <version>`: Python (`pyproject.toml`, `requirements.txt`, venv)
-  * `☕ <version>`: Java (`pom.xml`, `build.gradle`)
-  * `⚙️ <version>`: C/C++ (`CMakeLists.txt`, `compile_flags.txt`)
-  * `🥟 <version>` / `🦕 <version>`: Bun / Deno
-  * `🌙 <version>`: Lua
-  * `🐳 <context>`: Docker context
+* **Project Language & Compiler Detection (Nerd Font Glyphs)**:
+  * `󰎙 <version>`: Node.js (`package.json`, `.node-version`)
+  * ` <version>`: Rust (`Cargo.toml`)
+  * ` <version>`: Go (`go.mod`, `*.go`)
+  * ` <version>`: Python (`pyproject.toml`, `requirements.txt`, venv)
+  * ` <version>`: Java (`pom.xml`, `build.gradle`)
+  * ` <version>`: C/C++ (`CMakeLists.txt`, `compile_flags.txt`)
+  * `󰮄 <version>` / ` <version>`: Bun / Deno
+  * ` <version>`: Lua
+  * `󰡨 <context>`: Docker context
 * **Git Status Indicators**:
   * ` <branch>`: Active branch with Nerd Font Octicon glyph.
   * `+<count>`: Files staged for commit (`git add`).
