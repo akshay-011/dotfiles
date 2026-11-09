@@ -78,43 +78,43 @@ disabled = false
 # ------------------------------------------------------------------------------
 
 [nodejs]
-symbol = "󰎙 "
+symbol = "📦 "
 style = "bold green"
 format = "[$symbol($version )]($style)"
 
 [rust]
-symbol = " "
+symbol = "🦀 "
 style = "bold red"
 format = "[$symbol($version )]($style)"
 
 [golang]
-symbol = " "
+symbol = "🐹 "
 style = "bold cyan"
 format = "[$symbol($version )]($style)"
 
 [python]
-symbol = " "
+symbol = "🐍 "
 style = "bold yellow"
 format = "[$symbol($version )]($style)"
 
 [java]
-symbol = " "
+symbol = "☕ "
 style = "bold red"
 format = "[$symbol($version )]($style)"
 
 [c]
-symbol = " "
+symbol = "⚙️ "
 style = "bold blue"
 format = "[$symbol($version )]($style)"
 detect_files = ["CMakeLists.txt", "compile_flags.txt", "compile_commands.json"]
 
 [zig]
-symbol = " "
+symbol = "⚡ "
 style = "bold yellow"
 format = "[$symbol($version )]($style)"
 
 [bun]
-symbol = "󰮄 "
+symbol = "🥟 "
 style = "bold white"
 format = "[$symbol($version )]($style)"
 
@@ -124,12 +124,12 @@ style = "bold green"
 format = "[$symbol($version )]($style)"
 
 [lua]
-symbol = " "
+symbol = "🌙 "
 style = "bold blue"
 format = "[$symbol($version )]($style)"
 
 [docker_context]
-symbol = "󰡨 "
+symbol = "🐳 "
 style = "bold blue"
 format = "[$symbol$context]($style) "
 

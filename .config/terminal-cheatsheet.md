@@ -9,18 +9,18 @@ Your **Foot terminal**, **Starship prompt**, and **Bash CLI workflow** on Omarch
 Configured in [`~/.config/starship.toml`](file:///home/akshay/.config/starship.toml):
 
 * **Two-Line Developer Layout**:
-  * **Line 1 (Context)**: Directory (`repo/path`) → Git Branch (` main`) → Git Status Badges → Line Diff Metrics (`+10 -2`) → **Project Language/Compiler** (`󰎙 v26.13.0`, ` v21.0.4`, etc.) → Execution Duration (`took 2.5s `) → Exit Status (`✘`).
+  * **Line 1 (Context)**: Directory (`repo/path`) → Git Branch (` main`) → Git Status Badges → Line Diff Metrics (`+10 -2`) → **Project Language/Compiler** (`📦 v26.13.0`, `☕ v21.0.4`, etc.) → Execution Duration (`took 2.5s `) → Exit Status (`✘`).
   * **Line 2 (Action)**: Clean prompt input character (`❯`).
-* **Project Language & Compiler Detection**:
-  * `󰎙 <version>`: Node.js (`package.json`, `.node-version`)
-  * ` <version>`: Rust (`Cargo.toml`)
-  * ` <version>`: Go (`go.mod`, `*.go`)
-  * ` <version>`: Python (`pyproject.toml`, `requirements.txt`, venv)
-  * ` <version>`: Java (`pom.xml`, `build.gradle`)
-  * ` <version>`: C/C++ (`CMakeLists.txt`, `compile_flags.txt`)
-  * `󰮄 <version>` / `🦕 <version>`: Bun / Deno
-  * ` <version>`: Lua
-  * `󰡨 <context>`: Docker context
+* **Project Language & Compiler Detection (2x Emoji Logos)**:
+  * `📦 <version>`: Node.js (`package.json`, `.node-version`)
+  * `🦀 <version>`: Rust (`Cargo.toml`)
+  * `🐹 <version>`: Go (`go.mod`, `*.go`)
+  * `🐍 <version>`: Python (`pyproject.toml`, `requirements.txt`, venv)
+  * `☕ <version>`: Java (`pom.xml`, `build.gradle`)
+  * `⚙️ <version>`: C/C++ (`CMakeLists.txt`, `compile_flags.txt`)
+  * `🥟 <version>` / `🦕 <version>`: Bun / Deno
+  * `🌙 <version>`: Lua
+  * `🐳 <context>`: Docker context
 * **Git Status Indicators**:
   * ` <branch>`: Active branch with Nerd Font Octicon glyph.
   * `+<count>`: Files staged for commit (`git add`).
@@ -43,7 +43,7 @@ Configured in [`~/.config/foot/foot.ini`](file:///home/akshay/.config/foot/foot.
   * **Transparency**: `alpha=0.94` subtle translucency that blends with the wallpaper while preserving 100% opaque, razor-sharp text.
   * **Background Tone**: Softened from pitch black (`#060606`) to a gentle dark charcoal tone (`#16151a`) for easier readability.
   * **Selection Highlight**: Neutral slate background (`#363d4a`) with crisp white text (`#ffffff`) for high contrast readability (10.9:1 WCAG AAA).
-  * **Font**: JetBrains Mono Nerd Font (`size=19`) with full Unicode and glyph coverage.
+  * **Font**: JetBrains Mono Nerd Font (`size=9.5`) with full Unicode and glyph coverage.
   * **Box Drawings**: `box-drawings-uses-font-glyphs=no` for pixel-perfect TUI borders without gaps in `lazygit`, `btop`, and `yazi`.
   * **Cursor**: Blinking block cursor (`blink-rate=500ms`).
 * **Interactive Keyboard Shortcuts**:
