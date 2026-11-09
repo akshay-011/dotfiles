@@ -34,13 +34,13 @@ install_packages() {
   if command -v pacman &>/dev/null; then
     info "Detected Arch Linux / Omarchy (pacman). Installing packages..."
     sudo pacman -S --needed --noconfirm \
-      git curl foot starship bat eza fzf fd zoxide neovim ttf-jetbrains-mono-nerd 2>/dev/null || \
+      git curl foot starship bat eza fzf fd zoxide neovim tmux ttf-jetbrains-mono-nerd 2>/dev/null || \
       warn "Some pacman packages may require manual install or AUR."
 
   elif command -v apt-get &>/dev/null; then
     info "Detected Debian / Ubuntu (apt). Installing packages..."
     sudo apt-get update -y
-    sudo apt-get install -y git curl foot fzf fd-find zoxide neovim bat 2>/dev/null || true
+    sudo apt-get install -y git curl foot fzf fd-find zoxide neovim tmux bat 2>/dev/null || true
     # Symlink fcat / fdfind if debian names them differently
     mkdir -p "$HOME/.local/bin"
     command -v fdfind &>/dev/null && ln -sf "$(which fdfind)" "$HOME/.local/bin/fd" || true
@@ -48,11 +48,11 @@ install_packages() {
 
   elif command -v dnf &>/dev/null; then
     info "Detected Fedora (dnf). Installing packages..."
-    sudo dnf install -y git curl foot starship bat eza fzf fd-find zoxide neovim jetbrains-mono-fonts || true
+    sudo dnf install -y git curl foot starship bat eza fzf fd-find zoxide neovim tmux jetbrains-mono-fonts || true
 
   elif command -v brew &>/dev/null; then
     info "Detected Homebrew. Installing packages..."
-    brew install starship bat eza fzf fd zoxide neovim || true
+    brew install starship bat eza fzf fd zoxide neovim tmux || true
   else
     warn "Unrecognized package manager. Please ensure starship, bat, eza, fzf, fd, and zoxide are installed."
   fi
@@ -138,6 +138,9 @@ apply_symlinks() {
   link_file "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
   link_file "$DOTFILES_DIR/.config/terminal-cheatsheet.md" "$HOME/.config/terminal-cheatsheet.md"
   link_file "$DOTFILES_DIR/.config/nvim/plugin/after/transparency.lua" "$HOME/.config/nvim/plugin/after/transparency.lua"
+  link_file "$DOTFILES_DIR/.config/git/config" "$HOME/.config/git/config"
+  link_file "$DOTFILES_DIR/.config/hypr/input.lua" "$HOME/.config/hypr/input.lua"
+  link_file "$DOTFILES_DIR/.config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
   link_file "$DOTFILES_DIR/.blerc" "$HOME/.blerc"
   link_file "$DOTFILES_DIR/.bash_custom" "$HOME/.bash_custom"
 }

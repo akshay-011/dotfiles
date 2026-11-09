@@ -7,6 +7,9 @@ Includes configured themes and setups for:
 * **Starship Prompt**: 2-line developer prompt featuring real-time Git branch, dirty/staged/untracked badges, diff metrics (`+10 -2`), execution timing, and clean prompt character (`❯`).
 * **`ble.sh` (Bash Line Editor)**: Fish-like autosuggestions, syntax highlighting, immediate <kbd>Enter</kbd> execution, and multiline suppression.
 * **Neovim Enhancements**: Transparent canvas with high-contrast text selection and readable LSP hover/word reference highlights.
+* **Git Configuration**: Modern histogram diff algorithm, moved-block color highlights, automatic upstream push setup, pull rebase, rerere conflict reuse, and portable GitHub CLI credential integration.
+* **Window Manager & Ergonomics (Hyprland)**: Caps Lock remapped to Control (`ctrl:nocaps`) and natural touchpad scrolling.
+* **Tmux Multiplexer**: Custom prefix (`C-Space` / `C-b`), vi copy mode, intuitive window splits, fast window switching, and high-contrast status bar.
 * **CLI Productivity**:
   * **Yazi**: Terminal file manager with auto-cd on exit (`y`).
   * **Glow**: Terminal markdown viewer and interactive pager (`md <file>` or `cheatsheet`).
@@ -43,16 +46,22 @@ source ~/.bashrc
 dotfiles/
 ├── .config/
 │   ├── foot/
-│   │   └── foot.ini               # Foot terminal configuration
-│   ├── starship.toml              # Starship prompt configuration
+│   │   └── foot.ini                 # Foot terminal configuration
+│   ├── git/
+│   │   └── config                   # Global Git preferences & credential helpers
+│   ├── hypr/
+│   │   └── input.lua                # Hyprland keyboard & touchpad ergonomics
 │   ├── nvim/
 │   │   └── plugin/
 │   │       └── after/
 │   │           └── transparency.lua # Neovim transparency & highlight styles
-│   └── terminal-cheatsheet.md     # Quick reference cheatsheet
-├── .blerc                         # ble.sh keybindings & settings
-├── .bash_custom                   # Modular custom aliases, functions & tools
-├── install.sh                     # Idempotent automated setup script
+│   ├── starship.toml                # Starship prompt configuration
+│   ├── terminal-cheatsheet.md       # Quick reference cheatsheet
+│   └── tmux/
+│       └── tmux.conf                # Tmux multiplexer bindings & style
+├── .blerc                           # ble.sh keybindings & settings
+├── .bash_custom                     # Modular custom aliases, functions & tools
+├── install.sh                       # Idempotent automated setup script
 └── README.md
 ```
 
